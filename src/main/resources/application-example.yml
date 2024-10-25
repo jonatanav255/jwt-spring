@@ -1,0 +1,23 @@
+server:
+  port: 0000
+
+application:
+  security:
+    jwt:
+      secret-key: key
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
+
+spring:
+  datasource:
+    url: database
+    username: key
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
